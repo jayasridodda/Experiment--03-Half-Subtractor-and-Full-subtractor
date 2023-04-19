@@ -27,17 +27,31 @@ Diff = A ⊕ B ⊕ Bin B = A'Bin + A'B + BBin
 
 ## Procedure
 
-
-
-Write the detailed procedure here 
-
+Connect the supply (+5V) to the circuit Switch ON the main switch If the output is 1, then the led glows. 
 
 ## Program:
-/*
+
 Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+Developed by: JAYASRI DODDA
+RegisterNumber:  212222240028
+```
+### PROGRAM FOR HALF SUBTRACTOR:
+module expthree(a,b,difference,borrow);
+input a,b;
+output difference,borrow;
+assign difference = (a^b);
+assign borrow = (~a&b);
+endmodule
+```
+```
+### PROGRAM FOR FULL SUBTRACTOR:
+module expfour(a,b,c,difference,borrow);
+input a,b,c;
+output difference,borrow;
+assign difference=(a^b^c);
+assign borrow=(~a&(b^c)|(b&c));
+endmodule
+```
 
 ## Output:
 
